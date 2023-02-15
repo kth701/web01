@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html  xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+</head>
+<body>
+    <h1>Thymeleaf 링크처리 예제</h1>
+    <hr>
+<div>
+    <!-- @{링크주소}, ${객체변수 or 값 or 수식... } -->
+    <a href="http://www.naver.com" th:href="@{/thymeleaf/ex01}">예제1 페이지 이동</a>
+</div>
+<div>
+    <a href="#" th:href="@{http://www.thymeleaf.org}">타임리프 공식사이트</a>
+</div>
+<div>
+    <a  th:href="@{/thymeleaf/ex05(name='홍길동',age=20)}">
+        Thymeleaf 매개변수 전달
+    </a>
+</div>
+<div>
+
+</div>
+</body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html  xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>HelloArray</title>
+</head>
+<body>
+    <h4>[[${list}]]</h4>
+    <hr>
+    <h4 th:text="${list}"></h4>
+    <hr>
+    <div th:with="num1=${100}, num2=${200}">
+        <h4 th:text="${num1+num2}">result</h4>
+    </div>
+    <hr>
+    <ul>
+        <li th:each="str: ${list}" th:text="${str}"></li>
+    </ul>
+    <hr>
+    <ul>
+        <th:block th:each="str: ${list}">
+            <li>[[${str}]]</li>
+        </th:block>
+    </ul>
+</body>
+</html>
